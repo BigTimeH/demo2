@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: 12345
       POSTGRES_DB: Ing_Dummy
 	ports:
-      - "5432:5432"  
+        - "5432:5432"  
   pgadmin:
     container_name: pgadmin4
     image: dpage/pgadmin4
