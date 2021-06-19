@@ -1,0 +1,21 @@
+version: '3.2'
+services:
+  db:
+    container_name: pg_database
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: Ing_Dummy
+	ports:
+      - "5432:5432"  
+  pgadmin:
+    container_name: pgadmin4
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: 12345
+    ports:
+       - "5004:80"
